@@ -1,0 +1,14 @@
+{
+  "games": [
+    { "package": "org.supertuxkart.stk", "title": "SuperTuxKart", "publisher": "SuperTuxKart Team", "color": "#e8501f", "description": "Kart racing with Tux and friends." },
+    { "package": "io.anuke.mindustry", "title": "Mindustry", "publisher": "Anuke", "color": "#d4a02b", "description": "Factory-building tower defense." },
+    { "package": "com.shatteredpixel.shatteredpixeldungeon", "title": "Shattered Pixel Dungeon", "publisher": "Shattered Pixel", "color": "#3c6e4f", "description": "Roguelike dungeon crawler." },
+    { "package": "com.unciv.app", "title": "Unciv", "publisher": "Unciv Team", "color": "#2b5d9c", "description": "Turn-based civilization strategy." },
+    { "package": "net.minetest.minetest", "title": "Luanti", "publisher": "Luanti Team", "color": "#5b8c32", "description": "Open-source voxel sandbox (formerly Minetest)." },
+    { "package": "org.jfedor.frozenbubble", "title": "Frozen Bubble", "publisher": "Jfedor", "color": "#2aa3d6", "description": "Classic bubble-popping puzzler." },
+    { "package": "com.uberspot.a2048", "title": "2048", "publisher": "Uberspot", "color": "#edc22e", "description": "Slide and merge numbered tiles." },
+    { "package": "dev.lucanlm.antimine", "title": "Antimine", "publisher": "Lucas Lima", "color": "#7a4bd1", "description": "Minesweeper, reimagined." },
+    { "package": "name.boyle.chris.sgtpuzzles", "title": "Simon Tatham's Puzzles", "publisher": "Chris Boyle", "color": "#c23b5a", "description": "40 logic puzzles in one app." },
+    { "package": "com.watabou.pixeldungeon", "title": "Pixel Dungeon", "publisher": "Watabou", "color": "#6b4a2f", "description": "The original pixel-art roguelike." }
+  ]
+}

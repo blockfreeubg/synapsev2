@@ -1,0 +1,11 @@
+{
+  "name": "Synapse",
+  "short_name": "Synapse",
+  "description": "Play Android games streamed from your own device pool.",
+  "start_url": "/",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "background_color": "#ebebeb",
+  "theme_color": "#ff2d55",
+  "icons": [{ "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}

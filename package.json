@@ -1,0 +1,20 @@
+{
+  "name": "synapse-cloud",
+  "version": "0.1.0",
+  "description": "Console-style cloud gaming for Android games, streamed from your own pool of ADB devices (redroid, emulators, phones).",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "DEMO_DEVICES=2 node --watch server/index.js",
+    "fetch-scrcpy": "sh scripts/fetch-scrcpy.sh",
+    "test": "node --test test/*.test.js"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  }
+}

@@ -1,0 +1,43 @@
+# Synapse + a pool of redroid Android containers.
+#
+#   ADMIN_TOKEN=$(openssl rand -hex 16) docker compose up -d --build
+#   docker compose up -d --scale redroid=4      # more devices, no other changes
+#
+# The host needs the binder kernel module first; see README.md.
+
+services:
+  synapse:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      # Every container of the "redroid" service becomes a device (via Docker DNS).
+      ANDROID_DEVICES: dns:redroid:5555
+      ADMIN_TOKEN: ${ADMIN_TOKEN:-}
+      ACCESS_CODE: ${ACCESS_CODE:-}
+      IDLE_TIMEOUT: ${IDLE_TIMEOUT:-600}
+      SESSION_MAX_MINUTES: ${SESSION_MAX_MINUTES:-0}
+    volumes:
+      - synapse-data:/data
+      - adb-keys:/root/.android
+    depends_on:
+      - redroid
+    restart: unless-stopped
+
+  redroid:
+    image: ${REDROID_IMAGE:-redroid/redroid:13.0.0-latest}
+    privileged: true
+    # Never publish port 5555: ADB gives full control of the device.
+    command:
+      - androidboot.redroid_width=1280
+      - androidboot.redroid_height=720
+      - androidboot.redroid_dpi=240
+      - androidboot.redroid_fps=60
+      - androidboot.use_memfd=true
+    deploy:
+      replicas: 2
+    restart: unless-stopped
+
+volumes:
+  synapse-data:
+  adb-keys:
